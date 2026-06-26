@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер температури</title>
+</head>
+<body>
 
+<h1>Конвертер температури</h1>
+
+<form method="POST">
+    <label for="celsius">Температура (°C):</label>
+    <input
+        type="number"
+        id="celsius"
+        name="celsius"
+        step="any"
+        required
+    >
+    <button type="submit">Перевести</button>
+</form>
+
+<% if (celsius !== null) { %>
+    <hr>
+    <p>Температура: <%= celsius %> °C</p>
+    <p>У Фаренгейтах: <%= fahrenheit %> °F</p>
+<% } %>
+
+</body>
+</html>
