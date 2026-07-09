@@ -1,6 +1,7 @@
+from flask import Flask, request, render_template
 
+app = Flask(__name__)
 
-app = Flask(temperature)
 
 @app.route("/temperature", methods=["GET", "POST"])
 def temperature():
@@ -16,6 +17,7 @@ def temperature():
         celsius=celsius,
         fahrenheit=fahrenheit
     )
+
 
 if __name__ == "__main__":
     app.run(debug=True)
