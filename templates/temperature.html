@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+
+    <h2>Конвертер температуры</h2>
+
+    <form method="POST">
+        <label>Введите температуру (°C):</label>
+        <input type="number" step="any" name="celsius" required>
+        <button type="submit">Перевести</button>
+    </form>
+
+    {% if fahrenheit is not none %}
+        <h3>{{ celsius }} °C = {{ fahrenheit }} °F</h3>
+    {% endif %}
+
+</body>
+</html>
